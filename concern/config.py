@@ -3,6 +3,10 @@ from collections import OrderedDict
 
 import anyconfig
 import munch
+import collections.abc
+
+for name in collections.abc.__all__:
+    setattr(collections, name, getattr(collections.abc, name))
 
 
 class Config(object):
