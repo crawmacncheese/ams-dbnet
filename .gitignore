@@ -109,7 +109,7 @@ venv.bak/
 log.txt # From the naive evaluating of ICDAR15
 
 # specific directory
-datasets
+# datasets
 evaluation
 experiments/backup
 lib
