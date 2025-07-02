@@ -57,6 +57,7 @@ class ImageDataset(data.Dataset, Configurable):
         res = []
         for gt in self.gt_paths:
             lines = []
+            gt = gt.replace('\ufeff', '') #Strip BOM characters from file name
             reader = open(gt, 'r').readlines()
             for line in reader:
                 item = {}
